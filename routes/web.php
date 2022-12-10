@@ -38,10 +38,20 @@ Route::group(['prefix' => 'admin'], function() {
   });
 
 //Route Kategori
-// route kategori
 Route::resource('kategori', 'KategoriController');
+
 // route produk
 Route::resource('laptop', 'ProdukController');
+
 // route customer
 Route::resource('customer', 'CustomerController');
+
+//Route Transaksi
+Route::resource('transaksi', 'TransaksiController');
+
+// setting profil
+Route::get('setting', 'UserController@setting');
 ?>
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

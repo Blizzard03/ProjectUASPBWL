@@ -27,7 +27,7 @@
                     <a class="nav-link" href="{{ URL::to('About') }}">Tentang Kami</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/Login.Login">Login</a>
+                    <a class="nav-link" href="{{ URL::to('login') }}">Login</a>
                 </li>
             </ul>
         </div>
