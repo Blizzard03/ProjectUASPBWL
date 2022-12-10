@@ -14,7 +14,9 @@ return new class extends Migration
     public function up()
     {
         Schema::create('images', function (Blueprint $table) {
-            $table->id();
+            $table->id('User_ID');
+            $table->string('File_Path');
+            $table->foreign('User_ID')->references('User_ID')->on('customers_tabel');
             $table->timestamps();
         });
     }
