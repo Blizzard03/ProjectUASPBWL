@@ -66,3 +66,17 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+  // hapus image produk
+  Route::delete('produkimage/{id}', 'ProdukController@deleteimage');
+  // slideshow
+  Route::resource('slideshow', 'SlideshowController');
+
+  Route::delete('produkimage/{id}', 'ProdukController@deleteimage');
+  // slideshow
+  Route::resource('slideshow', 'SlideshowController');
+  // produk promo
+  Route::resource('promo', 'ProdukPromoController');
+  // load async produk
+  Route::get('loadprodukasync/{id}', 'ProdukController@loadasync');
+  
