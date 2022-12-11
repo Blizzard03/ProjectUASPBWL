@@ -26,4 +26,8 @@ class Laptop extends Model
         'SSD',
         'Harga'
     ];
+
+    public function Image(){
+        return $this->hasMany('App\Product_Image', 'ID_Laptop');
+    }
 }

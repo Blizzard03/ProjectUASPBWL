@@ -13,10 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('images', function (Blueprint $table) {
-            $table->id('User_ID');
-            $table->string('File_Path');
-            $table->foreign('User_ID')->references('User_ID')->on('customers_tabel');
+        Schema::create('image_product', function (Blueprint $table) {
+            $table->id('ID_Laptop');
+            $table->string('File_Path')->nullable();
+            $table->foreign('ID_Laptop')->references('ID_Laptop')->on('laptops');
             $table->timestamps();
         });
     }
@@ -28,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('images');
+        Schema::dropIfExists('image_product');
     }
 };
